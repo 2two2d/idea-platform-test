@@ -1,0 +1,7 @@
+.button {
+  @apply w-[140px] h-[60px] bg-button-primary rounded-md flex items-center justify-center gap-3 text-text-white;
+
+  &:hover {
+    @apply opacity-85;
+  }
+}

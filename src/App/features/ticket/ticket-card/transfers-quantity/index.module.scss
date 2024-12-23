@@ -1,0 +1,8 @@
+.transfers-quantity {
+  @apply relative w-[100px] h-[30px] border-b border-border-secondary
+    text-[12px] text-center align-middle uppercase text-text-secondary;
+
+  &_icon {
+    @apply relative left-[100px] top-[1px];
+  }
+}

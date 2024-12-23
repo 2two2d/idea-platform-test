@@ -1,0 +1,19 @@
+.ticket-card {
+    @apply w-[580px] h-[160px] flex bg-bg-white rounded-md shadow-md;
+
+    & > div {
+        @apply p-6;
+    }
+
+    &_left-block {
+        @apply h-full flex flex-col items-center justify-between border-r;
+
+        &_logo {
+            @apply w-[100px] h-[30px];
+        }
+    }
+
+    &_right-block {
+        @apply w-full flex justify-evenly;
+    }
+}
