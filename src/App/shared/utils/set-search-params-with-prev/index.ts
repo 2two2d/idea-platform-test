@@ -11,7 +11,10 @@ const useSetSearchParamsWithPrev = (): IUseSetSearchParamsWithReturn => {
   const [_, setSearchParams] = useSearchParams()
 
   return (key: ESearchParams, value: string) => {
-    setSearchParams((prev) => ({ ...Object.fromEntries(prev.entries()), [key]: value }))
+    setSearchParams((prev) => {
+      prev.set(key, value)
+      return prev
+    })
   }
 }
 

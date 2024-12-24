@@ -50,6 +50,9 @@ const TicketCard = ({ ticket, className, ...props }: ITicketCardProps): ReactEle
             { ' ' }
 
             за
+
+            { ' ' }
+
             { getPrice() }
           </p>
         ) }

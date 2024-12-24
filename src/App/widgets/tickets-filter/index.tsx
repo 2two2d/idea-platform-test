@@ -7,10 +7,11 @@ import { ESearchParams } from '@shared/enum/search-params'
 import TransfersCheckboxFilter from '@features/transfers-checkbox-filter'
 import { useSetSearchParamsWithPrev } from '@shared/utils/set-search-params-with-prev'
 
+import { ECheckboxFilter } from '@shared/enum/checkbox-filter'
+
 import style from './index.module.scss'
 
 import type { IDetailedProps } from '@shared/interface'
-
 import type { ReactNode } from 'react'
 
 interface IFilterTicketsProps extends IDetailedProps<HTMLDivElement> {
@@ -26,6 +27,8 @@ const FilterTickets = ({ className, ...props }: IFilterTicketsProps): ReactNode 
 
   useEffect(() => {
     setSearchParams(ESearchParams.CURRENCY, ECurrency.RUB)
+
+    setSearchParams(ESearchParams.TRANSFERS, ECheckboxFilter.ALL)
   }, [])
 
   return (
