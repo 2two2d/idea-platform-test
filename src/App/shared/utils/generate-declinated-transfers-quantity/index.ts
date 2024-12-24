@@ -1,4 +1,6 @@
 const generateDeclinatedTransfersQuantity = (number: number) => {
+    if (number === 0) return "Без пересадок"
+
     const lastDigit = number % 10;
     const lastTwoDigits = number % 100;
 

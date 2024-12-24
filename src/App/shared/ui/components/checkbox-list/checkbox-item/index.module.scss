@@ -1,0 +1,15 @@
+.checkbox-wrapper {
+  @apply w-full h-[30px] p-3 flex items-center gap-2 text-[12px] hover:bg-bg-paleBlue;
+
+  &_input {
+    @apply accent-accent-blue
+  }
+
+  &_label {
+    @apply text-text-secondary;
+  }
+
+  &_action-text {
+    @apply ml-auto text-accent-blue;
+  }
+}

@@ -1,0 +1,7 @@
+.ticket-card {
+  @apply w-[580px] h-[160px] flex items-center justify-center bg-bg-white rounded-md shadow-md;
+
+  &_title {
+    @apply text-3xl text-text-primary font-semibold;
+  }
+}

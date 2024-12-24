@@ -1,0 +1,25 @@
+@mixin base {
+  width: 60px;
+  height: 40px;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border-width: 2px;
+  font-size: 16px;
+}
+
+.card {
+  @include base;
+  @apply  bg-bg-white border-border-softBlue text-accent-blue;
+
+  &:hover {
+    @apply bg-bg-paleBlue cursor-pointer;
+  }
+
+  &__active {
+    @include base;
+    @apply bg-accent-blue border-accent-blue !border-2 text-text-white;
+  }
+}

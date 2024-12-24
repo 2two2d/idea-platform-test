@@ -1,20 +1,32 @@
-import {ReactElement} from "react";
+import {ReactElement, useCallback} from "react";
 import {ITicketDto} from "@entities/ticket/interface";
 
 import style from "./index.module.scss"
 import {IDetailedProps} from "@shared/interface";
-import {makeClassname} from "@shared/utils";
+import {falsy, makeClassname} from "@shared/utils";
 import Button from "@shared/ui/components/button";
 import {formatPrice} from "@shared/utils/format-price";
 import {ECurrency} from "@shared/enum/currency";
 import FlightDataBlock from "@features/ticket/ticket-card/flight-data-block";
 import TransfersQuantity from "@features/ticket/ticket-card/transfers-quantity";
+import {useSearchParams} from "react-router";
+import {ESearchParams} from "@shared/enum/search-params";
 
 interface ITicketCardProps extends IDetailedProps<HTMLDivElement> {
     ticket: ITicketDto
 }
 
 const TicketCard = ({ ticket, className, ...props }: ITicketCardProps): ReactElement => {
+    const [searchParams] = useSearchParams()
+
+    const currency = searchParams.get(ESearchParams.CURRENCY)
+
+    const getPrice = useCallback(() => {
+        if (falsy(currency)) return ticket.price
+
+        return formatPrice(ticket.price, currency as ECurrency)
+    }, [ticket.price, currency])
+
     return (
         <div className={ makeClassname(style['ticket-card'], className) } { ...props }>
             <div className={ style['ticket-card_left-block'] }>
@@ -22,7 +34,7 @@ const TicketCard = ({ ticket, className, ...props }: ITicketCardProps): ReactEle
                      className={ style['ticket-card_left-block_logo'] }
                      alt="img"/>
 
-                <Button text={<p>Купить <br/> за ${formatPrice(ticket.price, ECurrency.RUB)}</p>} className={""}/>
+                <Button text={<p>Купить <br/> за { getPrice() }</p>} className={""}/>
             </div>
             <div className={ style['ticket-card_right-block'] }>
                 <FlightDataBlock airport={ ticket.airport_departure } datetime={ ticket.datetime_departure }/>

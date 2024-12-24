@@ -2,6 +2,7 @@
 
 const BG_COLOR = {
   white: '#FFFFFF',
+  paleBlue: '#EFF4FF'
 }
 
 const TEXT_COLOR = {
@@ -15,7 +16,11 @@ const BUTTON_COLOR = {
 }
 
 const BORDER_COLOR = {
-  secondary: "#707070"
+  secondary: "#707070",
+  softBlue: '#C2D2F4'
+}
+const ACCENT_COLOR = {
+  blue: '#098EED',
 }
 
 export default {
@@ -31,6 +36,7 @@ export default {
         text: TEXT_COLOR,
         button: BUTTON_COLOR,
         border: BORDER_COLOR,
+        accent: ACCENT_COLOR
       }
     },
   },

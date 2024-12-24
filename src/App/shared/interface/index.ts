@@ -6,7 +6,17 @@ interface IPageProps {
 
 type IDetailedProps<T> = DetailedHTMLProps<HTMLProps<T>, T>
 
+type ILogoProps = IDetailedProps<HTMLImageElement>
+
+interface ICheckboxItem {
+    label: string
+    value: string
+    isChecked: boolean
+}
+
 export type {
     IPageProps,
-    IDetailedProps
+    IDetailedProps,
+    ILogoProps,
+    ICheckboxItem
 }

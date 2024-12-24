@@ -14,7 +14,7 @@ interface ITransfersQuantityProps extends IDetailedProps<HTMLDivElement> {
 const TransfersQuantity = ({ transfers, className, ...props }: ITransfersQuantityProps): ReactElement => {
     return (
         <div className={ makeClassname(style['transfers-quantity'], className) } { ...props }>
-            { generateDeclinatedTransfersQuantity(transfers) }
+            { generateDeclinatedTransfersQuantity(transfers).toUpperCase() }
 
             <Icon source="airplane" className={ style['transfers-quantity_icon'] }/>
         </div>

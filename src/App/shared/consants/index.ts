@@ -1,5 +1,7 @@
 import {ECurrency} from "@shared/enum/currency";
 
+const MAX_FLIGHTS = 3
+
 const BASE_CURRENCY = ECurrency.USD
 
 const CURRENCY_COEFF = {
@@ -16,5 +18,6 @@ const CURRENCY_SIGN = {
 export {
     BASE_CURRENCY,
     CURRENCY_COEFF,
-    CURRENCY_SIGN
+    CURRENCY_SIGN,
+    MAX_FLIGHTS
 }
