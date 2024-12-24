@@ -1,7 +1,7 @@
 enum PageTitle {
-    TICKETS = 'View tickets',
+  TICKETS = 'View tickets',
 }
 
 export {
-    PageTitle
+  PageTitle
 }

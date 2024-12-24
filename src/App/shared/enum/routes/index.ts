@@ -1,8 +1,8 @@
 enum ERoutes {
-    TICKETS = 'tickets',
-    LIST = 'list',
+  TICKETS = 'tickets',
+  LIST = 'list',
 }
 
 export {
-    ERoutes
+  ERoutes
 }

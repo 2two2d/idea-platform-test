@@ -31,7 +31,6 @@ module.exports = {
         "vite.config.ts",
         "*.d.ts",
         "src/shared/ui/assets/*",
-        // "src/app/assets/*",
         "*.svg",
         "postcss.config.js",
         "tailwind.config.js"

@@ -1,8 +1,8 @@
 enum ESearchParams {
-    CURRENCY = 'currency',
-    TRANSFERS = 'transfers'
+  CURRENCY = 'currency',
+  TRANSFERS = 'transfers'
 }
 
 export {
-    ESearchParams,
+  ESearchParams,
 }

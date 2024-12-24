@@ -1,7 +1,7 @@
 enum ECheckboxFilter {
-    ALL = 'all'
+  ALL = 'all'
 }
 
 export {
-    ECheckboxFilter
+  ECheckboxFilter
 }

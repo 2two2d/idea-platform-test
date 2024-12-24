@@ -1,9 +1,9 @@
-import {AirplaneIcon} from "@shared/ui/assets/icons"
+import { AirplaneIcon } from '@shared/ui/assets/icons'
 
 const ICONS = {
-    airplane: AirplaneIcon
+  airplane: AirplaneIcon
 } as const
 
 export {
-    ICONS,
+  ICONS,
 }

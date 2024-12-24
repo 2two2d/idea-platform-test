@@ -1,17 +1,22 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "ESNext",
+      "ES2023"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
+    "allowJs": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -22,10 +27,46 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "incremental": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
     "paths": {
-      "@*": ["./src/App/*"],
-      "@data/*": ["./src/data/*"]
+      "@assets/*": [
+        "src/App/shared/ui/assets/*"
+      ],
+      "@entities/*": [
+        "src/App/entities/*"
+      ],
+      "@features/*": [
+        "src/App/features/*"
+      ],
+      "@pages/*": [
+        "src/App/pages/*"
+      ],
+      "@shared/*": [
+        "src/App/shared/*"
+      ],
+      "@widgets/*": [
+        "src/App/widgets/*"
+      ],
+      "@settings/*": [
+        "src/App/settings/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@*": [
+        "src/*"
+      ]
     }
   },
   "include": [

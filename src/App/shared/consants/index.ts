@@ -1,23 +1,23 @@
-import {ECurrency} from "@shared/enum/currency";
+import { ECurrency } from '@shared/enum/currency'
 
 const MAX_FLIGHTS = 3
 
 const BASE_CURRENCY = ECurrency.USD
 
 const CURRENCY_COEFF = {
-    [ECurrency.EUR]: 1.1,
-    [ECurrency.RUB]: 100,
+  [ECurrency.EUR]: 1.1,
+  [ECurrency.RUB]: 100,
 }
 
 const CURRENCY_SIGN = {
-    [ECurrency.EUR]: "€",
-    [ECurrency.USD]: '$',
-    [ECurrency.RUB]: '₽',
+  [ECurrency.EUR]: '€',
+  [ECurrency.USD]: '$',
+  [ECurrency.RUB]: '₽',
 }
 
 export {
-    BASE_CURRENCY,
-    CURRENCY_COEFF,
-    CURRENCY_SIGN,
-    MAX_FLIGHTS
+  BASE_CURRENCY,
+  CURRENCY_COEFF,
+  CURRENCY_SIGN,
+  MAX_FLIGHTS
 }

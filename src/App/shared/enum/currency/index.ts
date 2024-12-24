@@ -1,9 +1,9 @@
 enum ECurrency {
-    USD = 'USD',
-    EUR = 'EUR',
-    RUB = 'RUB'
+  USD = 'USD',
+  EUR = 'EUR',
+  RUB = 'RUB'
 }
 
 export {
-    ECurrency
+  ECurrency
 }

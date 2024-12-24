@@ -1,28 +1,32 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-// @ts-expect-error idk
-import eslint from 'vite-plugin-eslint'
-import path from 'path'
+import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
-// https://vite.dev/config/
+import postcss from './postcss.config'
+import eslint from 'vite-plugin-eslint'
+
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     eslint({
       cache: false,
+      emitWarning: false,
       include: ['./src/**/*.ts', './src/**/*.tsx'],
-    })
+      exclude: ['/virtual:/**', 'node_modules/**']
+    }),
+    tsconfigPaths()
   ],
-  resolve: {
-    alias: {
-      "@app": path.resolve(__dirname, "./src/App"),
-      "@shared": path.resolve(__dirname, "./src/App/shared"),
-      "@entities": path.resolve(__dirname, "./src/App/entities"),
-      "@features": path.resolve(__dirname, "./src/App/features"),
-      "@widgets": path.resolve(__dirname, "./src/App/widgets"),
-      "@pages": path.resolve(__dirname, "./src/App/pages"),
-      "@settings": path.resolve(__dirname, "./src/App/settings"),
-      "@data": path.resolve(__dirname, "./src/data"),
+  css: {
+    postcss,
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+      }
     }
+  },
+  worker: {
+    plugins: () => [tsconfigPaths()]
   }
 })
+

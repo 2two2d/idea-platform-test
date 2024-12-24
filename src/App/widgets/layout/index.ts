@@ -1,2 +1,7 @@
-export * from './base'
-export * from './with-sidebar'
+import BaseLayout from './base'
+import LayoutWithSidebar from './with-sidebar'
+
+export {
+  BaseLayout,
+  LayoutWithSidebar
+}
