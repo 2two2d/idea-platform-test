@@ -1,4 +1,4 @@
-import { BASE_CURRENCY, CURRENCY_COEFF, CURRENCY_SIGN } from 'src/App/shared/constants'
+import { BASE_CURRENCY, CURRENCY_COEFF, CURRENCY_SIGN } from '@shared/constants'
 
 import type { ECurrency } from '@shared/enum/currency'
 
