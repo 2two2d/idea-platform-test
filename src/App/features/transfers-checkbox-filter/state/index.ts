@@ -1,4 +1,4 @@
-import { MAX_FLIGHTS } from '@shared/consants'
+import { MAX_FLIGHTS } from 'src/App/shared/constants'
 
 import { generateDeclinatedTransfersQuantity } from '@shared/utils/generate-declinated-transfers-quantity'
 import { ECheckboxFilter } from '@shared/enum/checkbox-filter'
